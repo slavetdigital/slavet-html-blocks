@@ -1,0 +1,75 @@
+{
+  "convert": {
+    "description": "Convert HTML sections to dynamic blocks and patterns per playbook.",
+    "params": {
+      "htmlDir": {
+        "type": "string",
+        "default": "HTML"
+      },
+      "srcDir": {
+        "type": "string",
+        "default": "src"
+      },
+      "buildDir": {
+        "type": "string",
+        "default": "build"
+      },
+      "auto": {
+        "type": "boolean",
+        "default": false
+      },
+      "yes": {
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "subagent": "html_block_converter"
+  },
+  "validate": {
+    "description": "Build, lint, validate blocks, run a11y + console tests.",
+    "params": {},
+    "subagent": "qa_guard"
+  },
+  "scan": {
+    "description": "Dry-run analysis: show how each file will split to blocks and which attributes are inferred.",
+    "params": {
+      "htmlDir": {
+        "type": "string",
+        "default": "HTML"
+      }
+    },
+    "subagent": "html_block_converter"
+  },
+  "fix": {
+    "description": "Apply safe fixes for common issues (sanitization, parity, attributes mismatch).",
+    "params": {},
+    "subagent": "qa_guard"
+  },
+  "sync": {
+    "description": "Coordinate with slavet-claude-frontend and slavet-claude-wordpress to share tokens and checks.",
+    "params": {},
+    "subagent": "resource_sentinel"
+  },
+  "settings": {
+    "description": "Adjust resource & context budgets and background scheduling policy.",
+    "params": {
+      "maxTokens": {
+        "type": "number",
+        "default": 6000
+      },
+      "fileBatch": {
+        "type": "number",
+        "default": 6
+      },
+      "sleepMs": {
+        "type": "number",
+        "default": 250
+      },
+      "throttleCPU": {
+        "type": "number",
+        "default": 0.2
+      }
+    },
+    "subagent": "resource_sentinel"
+  }
+}

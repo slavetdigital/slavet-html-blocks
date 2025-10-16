@@ -1,0 +1,17 @@
+{
+  "name": "resource_sentinel",
+  "role": "Protect credits and CPU/IO; schedule background jobs cooperatively.",
+  "budgets": {
+    "daily_tokens": 120000,
+    "max_concurrent_jobs": 1
+  },
+  "policies": [
+    "Use cached ASTs for unchanged files",
+    "Refuse to scan node_modules/.",
+    "Queue idle-time work only when editor is idle"
+  ],
+  "integration": [
+    "handshake with slavet-claude-frontend",
+    "handshake with slavet-claude-wordpress"
+  ]
+}

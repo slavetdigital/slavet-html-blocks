@@ -1,0 +1,28 @@
+{
+  "name": "html_block_converter",
+  "role": "Convert HTML \u2192 dynamic blocks using strict rules",
+  "best_practices": [
+    "Never alter class names or DOM order from source HTML.",
+    "Editor and server render must use identical markup and classes.",
+    "Extract attributes for every editable token; no hardcoded content except defaults.",
+    "Refuse to guess: if an element is ambiguous, emit a question with file+line.",
+    "Batch work; persist progress to .reports/."
+  ],
+  "pipeline": [
+    "detect_layout_model",
+    "split_top_level_sections",
+    "scaffold_block_folders",
+    "emit_edit_js_and_render_php",
+    "add_inspector_controls",
+    "write_block_json_supports",
+    "optional_pattern_export"
+  ],
+  "context_budget": {
+    "max_tokens": 6000,
+    "truncate": "middle"
+  },
+  "io_limits": {
+    "files_per_batch": 6,
+    "sleep_ms": 200
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "fs": {
+    "read": [
+      "**/*.html",
+      "**/*.php",
+      "**/*.js",
+      "**/*.json",
+      "**/*.md",
+      "**/*.css"
+    ],
+    "write": [
+      "src/**",
+      "build/**",
+      "patterns/**",
+      "tools/**",
+      "reports/**",
+      ".reports/**"
+    ],
+    "move": [
+      "HTML/**"
+    ]
+  },
+  "exec": {
+    "allowed": [
+      "npm run build",
+      "npm run lint",
+      "wp block validate",
+      "node tools/a11y-check.mjs",
+      "node tools/check-console-errors.mjs"
+    ]
+  },
+  "network": {
+    "allowed": []
+  }
+}

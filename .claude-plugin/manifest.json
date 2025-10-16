@@ -1,0 +1,22 @@
+{
+  "name": "slavet-html-blocks",
+  "version": "1.0.0",
+  "description": "Zero-error HTML \u2192 WordPress FSE dynamic blocks converter with QA and resource-thrifty sub-agents.",
+  "entry": "prompts/system.md",
+  "capabilities": "./capabilities.json",
+  "commands": "./commands.json",
+  "subagents": [
+    "./subagents/html_block_converter.json",
+    "./subagents/qa_guard.json",
+    "./subagents/resource_sentinel.json",
+    "./subagents/wp_bridge.json"
+  ],
+  "requires": {
+    "node": ">=18",
+    "wp-scripts": ">=27.0.0"
+  },
+  "compat": {
+    "claude_code": ">=0.7.0"
+  },
+  "market": "./marketplace.json"
+}

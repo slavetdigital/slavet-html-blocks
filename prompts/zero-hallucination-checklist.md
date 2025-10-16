@@ -1,0 +1,5 @@
+- Do not change class names or DOM order.
+- Parity between editor and render.
+- Attributes for every editable content.
+- Ask for missing file paths instead of guessing.
+- Run QA pipeline; only green is success.

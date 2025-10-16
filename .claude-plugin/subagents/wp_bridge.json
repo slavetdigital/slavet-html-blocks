@@ -1,0 +1,23 @@
+{
+  "name": "wp_bridge",
+  "role": "WordPress FSE domain knowledge and scaffolds",
+  "apis": [
+    "block.json templates",
+    "PHP sanitization maps",
+    "pattern export",
+    "theme.json supports"
+  ],
+  "defaults": {
+    "supports": {
+      "align": [
+        "wide",
+        "full"
+      ],
+      "spacing": {
+        "margin": true,
+        "padding": true
+      }
+    },
+    "render": "file:./render.php"
+  }
+}

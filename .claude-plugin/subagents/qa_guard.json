@@ -1,0 +1,16 @@
+{
+  "name": "qa_guard",
+  "role": "Validate build, parity, a11y, and console. Fail fast and report exact diffs/lines.",
+  "best_practices": [
+    "Stop on first red; do not proceed to next stage.",
+    "Attach minimal actionable patch suggestions.",
+    "No speculative fixes."
+  ],
+  "checks": [
+    "npm run build",
+    "npm run lint",
+    "wp block validate",
+    "node tools/a11y-check.mjs",
+    "node tools/check-console-errors.mjs"
+  ]
+}

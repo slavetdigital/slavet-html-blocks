@@ -1,0 +1,1 @@
+Convert: `/plugin slavet-html-blocks convert --html-dir HTML --src-dir src --build-dir build --auto`

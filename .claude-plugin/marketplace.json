@@ -1,0 +1,12 @@
+{
+  "id": "slavet-html-blocks",
+  "publisher": "Slavet Digital",
+  "summary": "Convert HTML files into FSE dynamic blocks with zero-hallucination safeguards and full QA.",
+  "homepage": "https://github.com/slavetdigital/slavet-html-blocks",
+  "version": "1.0.0",
+  "categories": [
+    "wordpress",
+    "developer-tools",
+    "productivity"
+  ]
+}
