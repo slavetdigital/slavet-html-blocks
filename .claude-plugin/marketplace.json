@@ -1,5 +1,5 @@
 {
-  "name": "Slavet Marketplace",
+  "name": "slavet-marketplace",
   "owner": {
     "name": "Slavēt Digital",
     "url": "https://www.slavetdigital.com"
@@ -8,7 +8,7 @@
     {
       "name": "slavet-html-blocks",
       "description": "Zero-error HTML → WordPress FSE dynamic blocks converter with QA and resource-thrifty sub-agents.",
-      "source": "."
+      "source": "./"
     }
   ]
 }
